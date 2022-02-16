@@ -14,4 +14,8 @@ export class CalculatorPage implements OnInit {
     alert('this is me');
   }
 
+  contactUs(){
+    //this is function contact us..
+  }
+
 }
