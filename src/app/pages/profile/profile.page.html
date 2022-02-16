@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h1>Your user id is: {{ user_id }}</h1>
+
+    <ion-list>
+      <ion-item>
+        <ion-label class="ion-text-wrap" position="fixed">Nama Pengguna</ion-label>
+        <ion-input [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Department</ion-label>
+        <ion-select placeholder="Sila Pilih" [(ngModel)]="user.department">
+          <ion-select-option value="IT">IT</ion-select-option>
+          <ion-select-option value="Admin">Admin</ion-select-option>
+          <ion-select-option value="Akaun">Akaun</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="submit()">Hantar</ion-button>
+  </div>
+
+  
+</ion-content>
