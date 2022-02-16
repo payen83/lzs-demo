@@ -30,6 +30,7 @@ export class HomePage {
 
   navigateM2(){
     this.router.navigateByUrl('/profile');
+    console.log('This is my message');
   }
 
 
