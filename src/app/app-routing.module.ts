@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'profile/:id',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'calculator',
+    loadChildren: () => import('./pages/calculator/calculator.module').then( m => m.CalculatorPageModule)
+  },
 
 ];
 
