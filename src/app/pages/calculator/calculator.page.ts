@@ -11,6 +11,7 @@ export class CalculatorPage implements OnInit {
 
   ngOnInit() {
     console.log('hello there');
+    alert('this is me');
   }
 
 }
