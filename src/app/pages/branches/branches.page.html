@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Branches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let branch of branches_inlocation" routerLink="/branch-detail/lat/{{ branch.latitude }}/long/{{ branch.longitude }}">
+      <ion-label>
+        <h1>{{ branch.nama }}</h1>
+        <p>{{ convertDistance(branch.distance) }} km</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

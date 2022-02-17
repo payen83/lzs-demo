@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1>New Post</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input [(ngModel)]="post.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Body</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="post.body"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button (click)="submitPost()">Submit</ion-button>
+
+
+  <h1>All Post</h1>
+  <ion-list>
+    <ion-item *ngFor="let post of data" routerLink="/postDetail/{{ post.id }}">
+      <ion-label class="ion-text-wrap">
+        <h2>Title: {{ post.title }}</h2>
+        <p>Body: {{ post.body }}</p>
+      </ion-label>
+      <ion-note slot="end">
+        <p>User ID: {{ post.userId }}</p>
+      </ion-note>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

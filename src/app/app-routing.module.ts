@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'calculator',
     loadChildren: () => import('./pages/calculator/calculator.module').then( m => m.CalculatorPageModule)
   },
+  {
+    path: 'posts',
+    loadChildren: () => import('./pages/posts/posts.module').then( m => m.PostsPageModule)
+  },
+  {
+    path: 'branches',
+    loadChildren: () => import('./pages/branches/branches.module').then( m => m.BranchesPageModule)
+  },
+  {
+    path: 'branch-detail/lat/:latitude/long/:longitude',
+    loadChildren: () => import('./pages/branch-detail/branch-detail.module').then( m => m.BranchDetailPageModule)
+  },
 
 ];
 
