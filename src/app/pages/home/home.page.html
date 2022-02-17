@@ -3,6 +3,7 @@
     <ion-title>
       Blank
     </ion-title>
+    <ion-toggle slot="end" (ionChange)="changeTheme($event)"></ion-toggle>
   </ion-toolbar>
 </ion-header>
 
@@ -20,6 +21,6 @@
 
     <ion-button color="warning" (click)="navigateM2()">Navigate Method 2</ion-button>
 
-    <ion-button color="danger" routerLink="/profile/{{ user_id }}">Navigate with Id {{ user_id }}</ion-button>
+    <ion-button color="dark" routerLink="/profile/{{ user_id }}">Navigate with Id {{ user_id }}</ion-button>
   </div>
 </ion-content>

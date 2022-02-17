@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
@@ -7,7 +7,7 @@ import { AlertController } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
   public nama_user: string;
   public user_id: any;
   constructor(public alertController: AlertController, public router: Router) {
@@ -15,7 +15,19 @@ export class HomePage {
     this.user_id = 789;
   }
 
-  btnClick(){
+  ngOnInit() {
+    document.body.setAttribute('color-theme', 'light');
+  }
+
+  changeTheme(event: any){
+    if(event.detail.checked){
+      document.body.setAttribute('color-theme', 'dark');
+    } else {
+      document.body.setAttribute('color-theme', 'light');
+    }
+  }
+
+  btnClick() {
     this.presentAlert();
   }
 
@@ -28,7 +40,7 @@ export class HomePage {
     await alert.present();
   }
 
-  navigateM2(){
+  navigateM2() {
     this.router.navigateByUrl('/profile');
     console.log('This is my message');
   }
