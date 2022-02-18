@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'branch-detail/lat/:latitude/long/:longitude',
     loadChildren: () => import('./pages/branch-detail/branch-detail.module').then( m => m.BranchDetailPageModule)
   },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
 
 ];
 

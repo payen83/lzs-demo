@@ -7,6 +7,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Dark Mode</ion-label>
+    <ion-toggle slot="end" (ionChange)="changeTheme($event)"></ion-toggle>
+  </ion-item>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -14,7 +18,12 @@
   </ion-header>
 
   <div id="container" class="ion-padding">
+    <h2 id="main-title">Welcome</h2>
+
     <ion-button color="success" expand="block" (click)="btnClick()">Welcome to LZS</ion-button>  
+
+    <ion-button color="secondary" expand="block" (click)="openPDF()"><ion-icon slot="start" name="document"></ion-icon>Download PDF</ion-button>  
+
     
     <ion-button routerLink="/profile">Navigate Method 1</ion-button>
 
